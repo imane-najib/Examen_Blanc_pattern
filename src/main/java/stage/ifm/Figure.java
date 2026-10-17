@@ -9,7 +9,12 @@ public abstract class Figure implements Observer, Serializable {
     public abstract double perimete();
     public abstract double surface();
     public abstract void dessiner();
-    public abstract void update();
+    @Override
+    public void update(Parametrage parametrage) {
+        this.epaisseur = parametrage.getEpaisseur();
+        this.couleurC = parametrage.getCouleurC();
+        this.couleurR = parametrage.getCouleurR();
+    }
 
     public int getEpaisseur() {
         return epaisseur;

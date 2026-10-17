@@ -23,11 +23,5 @@ public class cercle extends Figure{
         System.out.println("Surface : " + surface());
     }
 
-    @Override
-    public void update() {
-        System.out.println("Cercle :");
-        System.out.println("epaisseur : "+this.getEpaisseur()*3);
-        System.out.println("couleurC : "+this.getCouleurC()*7);
-        System.out.println("couleurR : "+this.getCouleurR()*10);
-    }
+
 }

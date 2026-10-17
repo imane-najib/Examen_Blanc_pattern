@@ -36,9 +36,9 @@ public class GroupeFigure extends Figure{
     }
 
     @Override
-    public void update() {
+    public void update(Parametrage parametrage) {
         for(Figure figure : figures){
-            figure.update();
+            figure.update(parametrage);
         }
     }
 

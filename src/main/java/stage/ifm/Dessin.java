@@ -29,21 +29,24 @@ public class Dessin implements Serializable {
         this.algoStrategy = algoStrategy;
     }
 
+    public AlgoStrategy getAlgoStrategy() {
+        return algoStrategy;
+    }
+
     public void AfficheFigures() {
         for (Figure figure : figures) {
             figure.dessiner();
         }
     }
-    public void SerialiserDessin(){
-        for (Figure figure : figures) {
-            try (ObjectOutputStream out =
-                         new ObjectOutputStream(new FileOutputStream("dessin.bin"))) {
+    public void SerialiserDessin() {
+        try (ObjectOutputStream out =
+                     new ObjectOutputStream(
+                             new FileOutputStream("dessin.bin"))) {
 
-                out.writeObject(figure);
+            out.writeObject(this);
 
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

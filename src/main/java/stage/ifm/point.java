@@ -1,6 +1,8 @@
 package stage.ifm;
 
-public class point {
+import java.io.Serializable;
+
+public class point implements Serializable {
     private double x;
     private double y;
     public point(double x, double y) {
@@ -15,4 +17,8 @@ public class point {
     public double getX() {
         return x;
     }
+    public void setX(double x) {
+        this.x = x;
+    }
+    public void setY(double y) {this.y = y;}
 }

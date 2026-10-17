@@ -1,5 +1,5 @@
 package stage.ifm;
 
 public interface Observer {
-     void update();
+     void update(Parametrage parametrage);
 }
