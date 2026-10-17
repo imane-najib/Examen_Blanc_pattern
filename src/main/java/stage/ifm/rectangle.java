@@ -22,4 +22,12 @@ public class rectangle extends Figure{
         System.out.println("Périmètre : " + perimete());
         System.out.println("Surface : " + surface());
     }
+
+    @Override
+    public void update() {
+        System.out.println("Rectangle :");
+        System.out.println("epaisseur : "+this.getEpaisseur()*8);
+        System.out.println("couleurC : "+this.getCouleurC()*18);
+        System.out.println("couleurR : "+this.getCouleurR()*20);
+    }
 }

@@ -35,6 +35,13 @@ public class GroupeFigure extends Figure{
         }
     }
 
+    @Override
+    public void update() {
+        for(Figure figure : figures){
+            figure.update();
+        }
+    }
+
     public void ajouterFigure(Figure f) {
         figures.add(f);
     }
