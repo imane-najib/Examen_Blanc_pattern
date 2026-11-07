@@ -5,6 +5,12 @@ import java.awt.*;
 public class cercle extends Figure{
     private point centre;
     private double rayon;
+
+    public cercle(point centre, double rayon) {
+        this.centre = centre;
+        this.rayon = rayon;
+    }
+
     @Override
     public double perimete() {
         return 2 * Math.PI * this.rayon;
